@@ -8,7 +8,7 @@ argument.add_argument("-i", "--image", required = True, help = "pathway to image
 args = vars(argument.parse_args())
 
 picture = cv2.imread(args["image"])
-cv2.imshow("Orginal Image", picture)
+cv2.imshow("Original Image", picture)
 
 matrix = n.float32([[1, 0, 25], [0, 1, 50]])
 shift = cv2.warpAffine(picture, matrix, (picture.shape[1], picture.shape[0]))
